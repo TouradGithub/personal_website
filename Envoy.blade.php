@@ -46,18 +46,20 @@ check_composer
             git add .
             git commit -m "update"
             git pull origin {{ $branch }}
+            composer update
             php artisan storage:link
 
         else
             echo "No changes detected, skipping commit and pull."
             git pull origin {{ $branch }}
+            composer update
             php artisan storage:link
 
         fi
         echo 'Pulling latest changes Terminate.'
 
         echo "Running Composer install."
-        composer install --no-interaction --prefer-dist --optimize-autoloader
+        composer update --no-interaction --prefer-dist --optimize-autoloader
         echo "Composer install finished"
     else
         echo 'Cloning repository'
