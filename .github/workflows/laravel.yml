@@ -42,8 +42,7 @@ jobs:
     - name: Install Composer dependencies
       run: composer install --no-interaction --prefer-dist --optimize-autoloader
 
-    - name: Test SSH Connection
-      run: ssh -p 65002 u334693063@154.56.33.183 "echo Connected"
+
 
     - name: Run Envoy Deployment
       run: php vendor/bin/envoy run deploy --branch=main
