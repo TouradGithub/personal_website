@@ -46,9 +46,13 @@ check_composer
             git add .
             git commit -m "update"
             git pull origin {{ $branch }}
+            php artisan storage:link
+
         else
             echo "No changes detected, skipping commit and pull."
             git pull origin {{ $branch }}
+            php artisan storage:link
+
         fi
         echo 'Pulling latest changes Terminate.'
 
