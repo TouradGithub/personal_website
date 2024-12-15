@@ -45,4 +45,4 @@ jobs:
 
 
     - name: Run Envoy Deployment
-      run: php vendor/bin/envoy run deploy --branch=main
+      run: php vendor/bin/envoy run deploy --branch=master
