@@ -2,7 +2,7 @@
 
 @setup
 echo "Connect to server";
-$repository = 'git@github.com:TouradGithub/personal-website.git';
+$repository = 'git@github.com:TouradGithub/personal_website.git';
 $branch = isset($branch) ? $branch : "master";
 $app_dir = "u334693063";
 
@@ -30,7 +30,7 @@ check_composer
 @endstory
 
 @task('check_composer')
-    if [ -f "/home/u334693063/domains/edzayer.com/public_html/test_system/composer.json" ]; then
+    if [ -f "/home/u334693063/domains/edzayer.com/public_html/personal_website/composer.json" ]; then
         echo "composer.json exists."
         echo 'Pulling latest changes.'
         cd {{ $new_release_dir }}
