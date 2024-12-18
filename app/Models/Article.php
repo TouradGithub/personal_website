@@ -15,7 +15,7 @@ class Article extends Model
     public function image () {
         if($this->image==null)
             return env("DEFAULT_IMAGE");
-        else return env("STORAGE_URL")."/uploads/articles/".$this->image;
+        else return url("starage/uploads/articles/".$this->image);
     }
     public function images(){
         return $this->hasMany('\App\Models\HubFile','type_id')->where("type","ARTICLE");
