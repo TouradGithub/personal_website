@@ -47,18 +47,16 @@ check_composer
             git commit -m "update"
             git pull origin {{ $branch }}
             composer update
-            php artisan storage:link
 
         else
             echo "No changes detected, skipping commit and pull."
             git pull origin {{ $branch }}
             composer update
-            php artisan storage:link
 
         fi
         echo 'Pulling latest changes Terminate.'
 
-        
+
         echo "Composer install finished"
     else
         echo 'Cloning repository'
@@ -85,6 +83,7 @@ check_composer
         echo "Optimized cleared"
         echo "Migration complete"
 
+        php artisan storage:link
         echo "Optimization complete"
 
         echo "OK"
