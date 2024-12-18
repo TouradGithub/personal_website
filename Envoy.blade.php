@@ -58,8 +58,7 @@ check_composer
         fi
         echo 'Pulling latest changes Terminate.'
 
-        echo "Running Composer install."
-        composer update --no-interaction --prefer-dist --optimize-autoloader
+        
         echo "Composer install finished"
     else
         echo 'Cloning repository'
